@@ -1,13 +1,6 @@
 package DiccionarioTelefonico;
 
-import com.opencsv.*;
-import com.opencsv.exceptions.CsvValidationException;
-
-import java.io.FileNotFoundException;
 import java.io.*;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -24,8 +17,8 @@ public class AddressBook {
         String[] direccion;
         try {
             Scanner sc = new Scanner(new File(archCSV));
-            sc.useDelimiter(",");   //sets the delimiter pattern
-            while (sc.hasNextLine())  //returns a boolean value
+            sc.useDelimiter(",");
+            while (sc.hasNextLine())
             {
                 direccion= sc.nextLine().split(",");
                 Create(direccion[0],direccion[1]);
